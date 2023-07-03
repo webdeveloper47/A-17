@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hello', [PostController::class, 'postFunction']);
+Route::delete('/posts/{id}/delete', 'PostController@delete');
+Route::get('/categories/{id}/posts', 'CategoryController@getPosts');
+
